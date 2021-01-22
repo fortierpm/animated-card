@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.container {
+    width: 30rem;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.card {
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 20rem;
+    padding: 0 2rem;
+    background: linear-gradient(to right bottom, rgb(56, 56, 117), 
+    rgb(100, 100, 100));
+    border-radius: 30px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
+}
+.projection {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projection img {
+    width: 6rem;
+    z-index: 2; /* above .circle */
+    transition: all 0.75s ease-out;
+}
+.circle {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(200, 200, 200));
+    position: absolute;
+    z-index: 1; /* above .card */
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info h1 {
+    font-size: 2rem;
+    padding-bottom: 0;
+    text-align: center;
+    transition: all 0.75s ease-out;
+}
+.info h3 {
+    font-size: 1rem;
+    font-weight: lighter;
+    padding: 1rem 0;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.75s ease-out;
+}
+.options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+}
+.options button {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+button.active {
+    background: rgb(132, 138, 199);
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.75s ease-out;
+}
+.submit {
+    margin-top: 1rem;
+    transition: all 0.75s ease-out;
+}
+.submit button {
+    cursor: pointer;
+    width: 100%;
+    padding: 0.3rem 0;
+    background: rgba(132, 138, 199, 1);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
